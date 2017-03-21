@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Part of the Laradic PHP Packages.
  *
@@ -10,6 +9,7 @@
  * @copyright Copyright 2017 (c) Robin Radic
  * @license https://laradic.mit-license.org The MIT License
  */
+
 namespace Laradic\Tests\DependencySorter;
 
 use Laradic\DependencySorter\Sorter;
@@ -30,12 +30,22 @@ class SorterTest extends TestCase
     protected $s;
 
 
+    /**
+     * setUp method
+     *
+     * @return void
+     */
     public function setUp()
     {
         parent::setUp();
         $this->s = new Sorter;
     }
 
+    /**
+     * testStringDependencyList method
+     *
+     * @return void
+     */
     public function testStringDependencyList()
     {
         $this->s->add([
@@ -55,6 +65,11 @@ class SorterTest extends TestCase
         $this->assertSame($this->expected, array_values($this->getResult()), $this->msg());
     }
 
+    /**
+     * testDependableDependencyList method
+     *
+     * @return void
+     */
     public function testDependableDependencyList()
     {
         $this->s->add([
@@ -73,6 +88,11 @@ class SorterTest extends TestCase
         $this->assertSame($this->expected, array_values($this->getResult()), $this->msg());
     }
 
+    /**
+     * testDependablesArrayDependencyList method
+     *
+     * @return void
+     */
     public function testDependablesArrayDependencyList()
     {
         $this->s->add([
@@ -91,6 +111,11 @@ class SorterTest extends TestCase
         $this->assertSame($this->expected, array_values($this->getResult()), $this->msg());
     }
 
+    /**
+     * testSortGoodSet method
+     *
+     * @return void
+     */
     public function testSortGoodSet()
     {
         $this->s->add([
@@ -120,6 +145,11 @@ class SorterTest extends TestCase
         $this->assertSame($this->expected, array_values($this->getResult()), $this->msg());
     }
 
+    /**
+     * testSortMissingSet method
+     *
+     * @return void
+     */
     public function testSortMissingSet()
     {
         $this->s->add([
@@ -145,6 +175,11 @@ class SorterTest extends TestCase
         $this->assertSame($this->expected, array_values($this->getResult()), $this->msg());
     }
 
+    /**
+     * testSortCircularSet method
+     *
+     * @return void
+     */
     public function testSortCircularSet()
     {
         $this->s->add([
@@ -171,6 +206,11 @@ class SorterTest extends TestCase
         $this->assertTrue($this->s->hasMissing('helloWorld'));
     }
 
+    /**
+     * tearDown method
+     *
+     * @return void
+     */
     public function tearDown()
     {
         unset($this->expected);
@@ -178,6 +218,11 @@ class SorterTest extends TestCase
         unset($this->s);
     }
 
+    /**
+     * msg method
+     *
+     * @return string
+     */
     protected function msg()
     {
         return sprintf(
@@ -187,6 +232,11 @@ class SorterTest extends TestCase
         );
     }
 
+    /**
+     * analyze method
+     *
+     * @return void
+     */
     protected function analyze()
     {
         return;
