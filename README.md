@@ -32,9 +32,10 @@ author: Robin Radic
 | `getHits($str=null)` | getHits |
 
 
+
 #### Simple
 ```php
-use Laradic\Dependencies\Sorter;
+use Laradic\DependencySorter\Sorter;
 
 $sorter = new Sorter();
 
@@ -47,7 +48,7 @@ $sorted = $sorter->sort();
 
 #### Using classes
 ```php
-use Laradic\Contracts\Dependencies\Dependable;
+use Laradic\DependencySorter\Dependable;
 
 class Asset implements Dependable {
     
@@ -75,7 +76,7 @@ $jquery = new Asset('jquery');
 $bootstrap = new Asset('bootstrap', ['jquery']);
 $bootstrapSwitch = new Asset('bootstrap-switch', ['jquery', 'bootstrap']);
 
-$sorter = new Sorter();
+$sorter = new \Laradic\DependencySorter\Sorter();
 $sorter->add([ $jquery, $bootstrap, $bootstrapSwitch ]);
 $sorted = $sorter->sort();
 ```

@@ -1,29 +1,26 @@
 {
-    "name": "laradic/dependencies",
-    "description": "A dependencies package for laravel",
+    "name": "laradic/dependency-sorter",
+    "description": "A dependency sorter package",
     "keywords": ["laradic", "dependencies", "laravel"],
     "license": "proprietary",
     "authors": [
         {"name": "Laradic", "homepage": "https://laradic.nl", "email": "info@laradic.nl"},
         {"name": "Robin Radic", "homepage": "http://robin.radic.nl", "email": "robin@laradic.nl", "role": "Developer"}
     ],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "require": {
         "php": ">=5.5.9"
     },
     "require-dev": {
-        "laradic/testing": "~1.0",
-        "laradic/phing": "~1.0"
+        "laradic/testing": "~1.0"
     },
     "autoload": {
         "psr-4": {
-            "Laradic\\Dependencies\\": "src/"
+            "Laradic\\DependencySorter\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Laradic\\Tests\\Dependencies\\": "tests/"
+            "Laradic\\Tests\\DependencySorter\\": "tests/"
         }
     },
     "extra": {
