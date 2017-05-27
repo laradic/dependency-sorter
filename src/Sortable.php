@@ -12,6 +12,7 @@
  */
 namespace Laradic\DependencySorter;
 
+
 /**
  * Interface Sortable
  *
