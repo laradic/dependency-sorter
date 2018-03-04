@@ -8,7 +8,7 @@
         {"name": "Robin Radic", "homepage": "http://robin.radic.nl", "email": "robin@laradic.nl", "role": "Developer"}
     ],
     "require": {
-        "php": ">=7.0.0"
+        "php": ">=7.1.0"
     },
     "require-dev": {
     },
@@ -24,7 +24,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0-dev"
+            "dev-master": "1.1-dev"
         }
     }
 }
